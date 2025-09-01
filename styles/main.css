@@ -525,3 +525,7 @@ body{
   .only-desktop { display: none !important; }
   .only-mobile  { display: block !important; }
 }
+
+.btn {
+  border: 1px solid white;
+}
