@@ -10,3 +10,13 @@ status = 200
 from = "/reset-password/"
 to = "/reset-password.html"
 status = 200
+
+[[redirects]]
+from = "/forgot-password"
+to = "/forgot-password.html"
+status = 200
+
+[[redirects]]
+from = "/forgot-password/"
+to = "/forgot-password.html"
+status = 200
