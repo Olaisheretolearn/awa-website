@@ -1,402 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>awa – Roommating, should be easy</title>
-
-  <!-- Site CSS -->
-  <link rel="stylesheet" href="styles/main.css"/>
-
-  <!-- Font fallbacks (everything except logo uses Darker Grotesque) -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap'); /* fallback for logo */
-    @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2a6dd7">
+  <meta name="description" content="Awa keeps roommate bills, chores, lists, and conversations under one roof.">
+  <title>awa — Roommating should be easy</title>
+  <link rel="stylesheet" href="styles/typography.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-<!-- ======================= Mobile Header ======================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#home" aria-label="Awa home">awa</a>
 
-    <header class="nav-mobile only-mobile">
-  <div class="nav-mobile__inner container">
-    <a class="logo" href="#" aria-label="awa home">awa</a>
-
-   <a class="btn btn--solid" 
-       href="folder/awa.apk" 
-       download 
-       aria-label="Download Awa (APK)">
-      Download
-    </a>
-
-  </div>
-</header>
-  <!-- ======================= NAV ======================= -->
-  <header class="nav only-desktop">
-    <div class="nav__inner container">
-      <a class="logo" href="#" aria-label="awa home">awa</a>
-      <nav class="nav__links">
-        <a href="#">Home</a>
-        <a href="#">App</a>
-        <a href="https://olaoluwaoke.com/awa">About</a>
-        <a href="#">Contact</a>
-         <a class="btn btn--outline" href="folder/awa.apk" download>Download</a>
+      <nav class="nav-actions" aria-label="Primary navigation">
+        <a class="nav-about" href="#features">About</a>
+        <a class="nav-download" href="folder/awa.apk" download>Download</a>
       </nav>
     </div>
   </header>
 
-  <!----==========================================================->
+  <main>
+    <section class="video-hero" id="home" aria-labelledby="hero-title">
+      <video class="hero-video" data-hero-video autoplay muted loop playsinline preload="auto">
+        <source src="assets/videos/video.mp4" type="video/mp4">
+      </video>
+      <div class="hero-shade"></div>
 
-  <!- MOBILE HERO (blue screen + floating bits + person) -->
-<section class="m-hero only-mobile">
-  <div class="container">
-    <h1>Adulting is hard<br>Roommating is harder</h1>
-    <p class="sub">Because sticky notes, group chats, and IOUs aren’t a long-term solution</p>
+      <div class="hero-copy">
+        <h1 id="hero-title">Roommating should be easy</h1>
+        <p>Everything roommates need all under one roof</p>
+      </div>
 
-    <div class="m-hero__art">
-      <img src="assets/images/stretching-man.png" alt="">
-      <!-- floating stickers -->
-      <img class="m-float m-money m-left"  src="assets/images/money.png" alt="">
-      <img class="m-float m-money m-right" src="assets/images/money.png" alt="">
-      <img class="m-float m-star"           src="assets/images/star.png"   alt="">
-    </div>
-  </div>
-</section>
+      <button class="video-control" type="button" data-video-control aria-label="Pause background video">
+        <span data-video-icon aria-hidden="true">Ⅱ</span>
+      </button>
 
-<!-- MOBILE FEATURES (text-only blocks, no opposing images) -->
-<section class="m-features only-mobile">
-  <div class="container">
-    <article class="m-feature">
-      <h3>Tasks &amp; Chores</h3>
-      <p>Create tasks, assign them to any roommate, and check them off when done. No more “I thought you were doing it.”</p>
-    </article>
+      <a class="scroll-cue" href="#features" aria-label="Explore Awa features">
+        <span>Explore</span>
+        <span aria-hidden="true">↓</span>
+      </a>
+    </section>
 
-    <article class="m-feature">
-      <h3>Bills &amp; Payments</h3>
-      <p>Make invoices on the fly, split the cost with everyone, and approve payments once you’ve seen them. Fair, simple, no awkward math.</p>
-    </article>
+    <section class="hero-download" aria-label="Download Awa">
+      <button type="button">Download Awa</button>
+    </section>
 
-    <article class="m-feature">
-      <h3>All talk, no clutter</h3>
-      <p>Keep every house update in one place—rent reminders, chore updates, or just memes—so nothing slips through the cracks.</p>
-    </article>
+    <section class="intro-copy section-shell" id="features" aria-labelledby="features-title">
+      <p class="section-label">One home. One app.</p>
+      <h2 id="features-title">Less admin.<br>More living.</h2>
+      <p class="section-lede">Split bills, share chores, build shopping lists, and keep every house update in one calm place.</p>
+    </section>
 
-    <article class="m-feature">
-      <h3>Lists everyone can agree on (mostly)</h3>
-      <p>Groceries, yard stuff, toilet paper—make shared lists and watch them update in real time. At checkout, the app splits costs automatically.</p>
-    </article>
-  </div>
-</section>
+    <section class="feature-list section-shell" aria-label="Awa features">
+      <article class="feature-row">
+        <div class="feature-copy">
+          <p class="feature-number">01</p>
+          <h3>Split bills, skip the awkward math</h3>
+          <p>Create an invoice, share it with the house, and let Awa work out everyone’s share. When they pay, you simply approve it.</p>
+        </div>
+        <div class="feature-visual feature-visual--coral">
+          <img class="visual-main" src="assets/images/pizza.png" alt="A pizza illustration">
+          <img class="visual-card visual-card--bill" src="assets/images/expenses.jpg" alt="A shared expense in Awa">
+        </div>
+      </article>
 
+      <article class="feature-row feature-row--reverse">
+        <div class="feature-copy">
+          <p class="feature-number">02</p>
+          <h3>Chores don’t do themselves</h3>
+          <p>Create tasks, assign them to any roommate, and check them off when they’re done. Everyone always knows whose turn it is.</p>
+        </div>
+        <div class="feature-visual feature-visual--sky">
+          <img class="visual-main visual-main--person" src="assets/images/stretching-man.png" alt="A happy roommate giving a thumbs up">
+          <img class="visual-card visual-card--chore" src="assets/images/mop-ocean.jpg" alt="A chore inside Awa">
+        </div>
+      </article>
 
+      <article class="feature-row">
+        <div class="feature-copy">
+          <p class="feature-number">03</p>
+          <h3>All talk, no clutter</h3>
+          <p>Keep rent reminders, chore updates, and the occasional meme together, so nothing important disappears into another group chat.</p>
+        </div>
+        <div class="feature-visual feature-visual--butter">
+          <img class="visual-main visual-main--person" src="assets/images/cinema.png" alt="A roommate listening to music">
+          <img class="visual-card visual-card--message" src="assets/images/message-bubble.jpg" alt="A roommate message in Awa">
+        </div>
+      </article>
 
+      <article class="feature-row feature-row--reverse">
+        <div class="feature-copy">
+          <p class="feature-number">04</p>
+          <h3>Lists everyone can agree on. Mostly.</h3>
+          <p>Share groceries and essentials in real time. At checkout, Awa can turn the list into a bill and split the cost automatically.</p>
+        </div>
+        <div class="feature-visual feature-visual--lilac">
+          <img class="shopping-screen" src="assets/images/shopping-list.jpg" alt="A shared shopping list in Awa">
+        </div>
+      </article>
+    </section>
 
+    <section class="download-banner" aria-labelledby="download-title">
+      <img src="assets/images/laughing-women.jpg" alt="Friends laughing together at home">
+      <div class="download-shade"></div>
+      <div class="download-copy section-shell">
+        <p class="section-label">Ready when you are</p>
+        <h2 id="download-title">Make home feel<br>easy again.</h2>
+        <a class="download-button" href="folder/awa.apk" download>Download Awa <span aria-hidden="true">↘</span></a>
+      </div>
+    </section>
 
+    <section class="personal-note">
+      <div class="section-shell personal-grid">
+        <p class="section-label">A personal note</p>
+        <div>
+          <h2>Built from real roommate life.</h2>
+          <p>Awa started as a small personal project because bills, chores, lists, and endless group chats made sharing a home harder than it needed to be. I’m committed to keeping it useful and making it better.</p>
+          <p>Have an idea or some feedback? Write to <a href="mailto:omobabaoke324@gmail.com">omobabaoke324@gmail.com</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<!-- MOBILE CARDS PAGE -->
-<section class="m-cards only-mobile">
-  <div class="container m-cards__head">
-    <h2>Your affairs<br>in good hands</h2>
-    <p class="note">not that kind, please – that’s on you</p>
-  </div>
-
-  <div class="center">
-
-  <div class="m-card m-card--red">
-    <h3>Bills?</h3>
-    <p>Congrats, you’re now CFO of the apartment</p>
-
-    <!-- pseudo images (visible alt placeholders) -->
-    <img class="sticker money-left"   data-show-alt src="assets/images/money.png"
-         alt="CARD(Bills): small money sticker, top-left" />
-    <img class="sticker coin-right"  data-show-alt src="assets/images/coin2.png"
-         alt="CARD(Bills): big coin, right-center" />
-  </div>
-
-  <div class="m-card m-card--pink">
-    <h3>Shopping List?</h3>
-    <p>Yes, Karen, we do need more toilet paper</p>
-
-    <img class="sticker basket-left" data-show-alt src="assets/images/shopping.png"
-         alt="CARD(Shopping): grocery basket, left" />
-    <img class="sticker money-right" data-show-alt src="assets/images/money.png"
-         alt="CARD(Shopping): money sticker, right" />
-  </div>
-
-  <div class="m-card m-card--green">
-    <h3>Messages?</h3>
-    <p>All your arguments, <br> neatly archived. Absolute cinema.</p>
-
-    <img class="sticker person-left" data-show-alt src="assets/images/cinema.png"
-         alt="CARD(Messages): waving person, left" />
-    <img class="sticker chat-right"  data-show-alt src="assets/images/star.png"
-         alt="CARD(Messages): chat bubble, right" />
-  </div>
-
-  <div class="m-card m-card--purple">
-    <h3>Chores?</h3>
-    <p>Because “vibes” don’t take out the trash.</p>
-
-    <img class="sticker spark-left"  data-show-alt src="assets/images/star.png"
-         alt="CARD(Chores): sparkles, left" />
-    <img class="sticker tools-right"  data-show-alt src="assets/images/clean.png"
-         alt="CARD(Chores): cleaning tools, right-bottom" />
-  </div>
-
-  </div>
-</section>
-
-
-
-
-
-
-
-
-  <!-- ======================= HERO ======================= -->
-  <section class="hero only-desktop">
-    <img class="float money money--left" src="assets/images/money.png" alt="" />
-    <img class="float star star--right" src="assets/images/star.png" alt="" />
-
-    <div class="container hero__inner">
-      <p class="eyebrow">awa app</p>
-      <h1 class="hero__title">Roommating, should be easy</h1>
-      <p class="hero__subtitle">
-        ✨ Everything roommates need – all under one roof (finally)
-      </p>
-
-      <div class="hero__art">
-        <img src="assets/images/stretching-man.png" alt="illustration of a person reclining happily"/>
+  <footer class="site-footer">
+    <div class="section-shell footer-grid">
+      <a class="footer-logo" href="#home">awa</a>
+      <p>Everything roommates need,<br>all under one roof.</p>
+      <div class="footer-links">
+        <a href="#features">About</a>
+        <a href="mailto:omobabaoke324@gmail.com">Contact</a>
+        <a href="folder/awa.apk" download>Download</a>
       </div>
     </div>
-  </section>
-
-  <!-- ======================= QUICK VALUE LINES ======================= -->
-<section class="lines container only-desktop">
-  <p>
-    Split bills in seconds and approve payments when they’re done.<br>
-    Create chores, assign them to anyone, and mark them complete.<br>
-    Add groceries or essentials to shared lists so nothing gets forgotten.<br>
-    Chat and react with your roommates – all in one app.
-  </p>
-</section>
-
-<section class="lines container only-mobile">
-  <p style="font-size: 15px; text-align: center; margin-top: -40px;">
-    Split bills in seconds and approve payments when they’re done.<br>
-    Create chores, assign them to anyone, and mark them complete.<br>
-    Add groceries or essentials to shared lists so nothing gets forgotten.<br>
-    Chat and react with your roommates – all in one app.
-  </p>
-</section>
-
-  <!-- ======================= FEATURES (PAGE 2) ======================= -->
-  <section class="feature-grid container  only-desktop">
-    <!-- Bills -->
-    <div class="feature">
-      <div class="feature__copy">
-        <h2>Split bills, skip the awkward math</h2>
-        <p class="muted">
-          Create an invoice, share it with your housemates, and the app sends
-          everyone their share automatically. When they pay, you just approve it –
-          simple, fair, done.
-        </p>
-      </div>
-      <div class="feature__art">
-        <!-- pizza with overlayed bill card -->
-        <img class="stack base" src="assets/images/pizza.png" alt="pizza illustration"/>
-        <img class="stack overlay card" src="assets/images/expenses.jpg" alt="bill card overlay"/>
-      </div>
+    <div class="section-shell footer-bottom">
+      <p>Independent, early-stage, and built with care.</p>
+      <p>© <span data-year></span> Awa</p>
     </div>
-
-    <!-- Chores -->
-    <div class="feature feature--swap">
-      <div class="feature__copy chores">
-        <h2>Chores don’t do themselves</h2>
-        <p class="muted">
-          Make a task, assign it to anyone in the house, and watch it get checked
-          off when it’s done. No more confusion about “whose turn it is.”
-        </p>
-      </div>
-      <div class="feature__art">
-        <img class="stack base bill" src="assets/images/thumbs-up-guy.png" alt="thumbs up person"/>
-        <img class="stack overlay small" src="assets/images/mop-ocean.jpg" alt="mop ocean task"/>
-      </div>
-    </div>
-
-    <!-- Chat -->
-    <div class="feature">
-      <div class="feature__copy">
-        <h2>All talk, no clutter</h2>
-        <p class="muted">
-          Keep every house update in one place so nothing slips through the
-          cracks. Whether it’s rent reminders, chore updates, or just dropping
-          memes, the chat makes sure everyone stays in the loop.
-        </p>
-      </div>
-      <div class="feature__art">
-        <img class="stack base" src="assets/images/earbud-girl.png" alt="girl with earbuds"/>
-        <img class="stack overlay bubble" src="assets/images/message-bubble.jpg" alt="message bubble saying 'hey guys'"/>
-      </div>
-    </div>
-
-    <!-- Lists -->
-    <div class="feature feature--swap">
-      <div class="feature__copy">
-        <h2>Lists everyone can agree on (mostly)</h2>
-        <p class="muted">
-          Need groceries, cleaning supplies, or just more snacks? Add it to a
-          shared list that everyone in the house can see. Make as many lists as
-          you want—grocery, yard, random Amazon things—and watch them update in
-          real time. When it’s time to check out, the app turns your list into a
-          bill so costs are split automatically.
-        </p>
-      </div>
-      <div class="feature__art ">
-        <img class="device" src="assets/images/shopping-list.jpg" alt="shopping list screen"/>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================= BIG CTA (PAGE 4) ======================= -->
-  <section class="cta">
-    <div class="cta__bg">
-      <img src="assets/images/laughing-women.jpg" alt="laughing friends on a couch"/>
-      <!-- optional wordmark if you have it
-      <img class="cta__wordmark" src="assets/images/awa-wordmark.png" alt="awa">
-      -->
-    </div>
-
-    <div class="cta__panel container only-desktop">
-      <h2>Roommating doesn’t have to be hard</h2>
-      <p class="muted">
-        Need groceries, cleaning supplies, or just more snacks? Add it to a shared
-        list that everyone can see. Make as many lists as you want, and watch
-        them update in real time. When it’s time to check out, the app splits the
-        costs automatically.
-      </p>
-
-        <div class="cta__panel container only-mobile">
-      <h2>Roommating doesn’t have to be hard</h2>
-      <p class="muted" style="font-size: 15px;">
-        Need groceries, cleaning supplies, or just more snacks? Add it to a shared
-        list that everyone can see. Make as many lists as you want, and watch
-        them update in real time. When it’s time to check out, the app splits the
-        costs automatically.
-      </p>
-
-
-     <a class="btn btn--solid" href="folder/awa.apk" download>Download</a>
-
-    </div>
-  </section>
-
-  <!-- ======================= PERSONAL NOTE + FOOTER ======================= -->
-  <section class="personal">
-    <div class="container">
-      <p>
-        This started out as a small personal project, just me tinkering around,
-        but it’s slowly grown into something bigger than I expected. I built it
-        because I know how messy living with roommates can get – bills, chores,
-        lists, and those endless group chats – and I wanted something that
-        actually makes it easier.
-      </p>
-      <p>
-        I’m committed to keeping this app alive and improving it as much as I can.
-        Life will get busy (it always does), but I’ll keep showing up for this.
-        If you have ideas, feedback, or just features you’d love to see, I’d
-        honestly love to hear from you. You can reach me anytime at
-        <a href="mailto:omobabaoke324@gmail.com">omobabaoke324@gmail.com</a>.
-        If I’m able to add your suggestion, I’ll let you know – this app should
-        feel as useful to you as it does to me.
-      </p>
-      <p>Thanks for giving it a shot and being part of the journey. This is just the beginning.</p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">awa</div>
-
-      <div class="footer__col">
-        <h4>Community</h4>
-        <a href="#">Blog</a>
-        <a href="#">Project description</a>
-        <a href="#">Developer</a>
-      </div>
-
-      <div class="footer__col">
-        <h4>Product</h4>
-        <a href="#">Download</a>
-        <a href="#">Contact</a>
-        <a href="#">Help</a>
-      </div>
-
-      <div class="footer__col">
-        <h4>Terms</h4>
-        <a href="#">Legal</a>
-        <a href="#">Privacy</a>
-      </div>
-
-      <div class="footer__col">
-        <h4>Download</h4>
-        <a class="icon-link" href="folder/awa.apk" download aria-label="App download">
-    Download APK
-      </div>
-    </div>
-
-    <div class="container footer__bottom">
-      <p class="disclaimer">
-        This isn’t a real company (at least not yet). It’s just me, building in
-        the early stages with a bit of duct tape and hope. If you’re giving it a
-        spin, please be cautious – things might glitch, features may disappear,
-        and updates will show up when life lets me code.
-      </p>
-
-      <div class="footer__socials">
-        <!-- you said you can provide icons; placeholders for now -->
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="X">X</a>
-        <a href="#" aria-label="Facebook">FB</a>
-      </div>
-    </div>
-
   </footer>
+
+  <script>
+    (() => {
+      const video = document.querySelector('[data-hero-video]');
+      const videoControl = document.querySelector('[data-video-control]');
+      const videoIcon = document.querySelector('[data-video-icon]');
+
+      const setVideoState = (isPlaying) => {
+        videoIcon.textContent = isPlaying ? 'Ⅱ' : '▶';
+        videoControl.setAttribute('aria-label', isPlaying ? 'Pause background video' : 'Play background video');
+      };
+
+      const initialPlay = video.play();
+      if (initialPlay) {
+        initialPlay.then(() => setVideoState(true)).catch(() => setVideoState(false));
+      }
+
+      videoControl.addEventListener('click', () => {
+        if (video.paused) {
+          video.play().then(() => setVideoState(true)).catch(() => setVideoState(false));
+        } else {
+          video.pause();
+          setVideoState(false);
+        }
+      });
+
+      document.querySelector('[data-year]').textContent = new Date().getFullYear();
+    })();
+  </script>
+
+  <!-- Start of Tawk.to Script -->
+  <script>
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    Tawk_API.onLoad = function () { Tawk_API.hideWidget(); };
+    (function () {
+      var s1 = document.createElement('script'), s0 = document.getElementsByTagName('script')[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/68b535da5d3ca01922570e67/1j41tkndm';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!-- End of Tawk.to Script -->
 </body>
 </html>
-
-<script>
-(function(){
-  document.querySelectorAll('img[data-show-alt]').forEach(function(img){
-    function toAlt(){
-      const tag = document.createElement('span');
-      tag.className = (img.className ? img.className + ' ' : '') + 'img-alt';
-      tag.textContent = img.alt || 'image';
-      if (img.getAttribute('style')) tag.setAttribute('style', img.getAttribute('style'));
-      img.replaceWith(tag);
-    }
-    img.addEventListener('error', toAlt, { once:true });
-    if (!img.getAttribute('src')) toAlt();
-  });
-})();
-</script>
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-Tawk_API.onLoad = function(){
-  Tawk_API.hideWidget();
-};
-
-
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68b535da5d3ca01922570e67/1j41tkndm';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
