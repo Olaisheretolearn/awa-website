@@ -2,6 +2,12 @@
 publish = "."
 
 [[redirects]]
+from = "/api/*"
+to = "https://awa-pp4u.onrender.com/api/:splat"
+status = 200
+force = true
+
+[[redirects]]
 from = "/reset-password"
 to = "/reset-password.html"
 status = 200
