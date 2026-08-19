@@ -209,19 +209,18 @@ a { -webkit-tap-highlight-color: transparent; }
 .hero-download {
   display: flex;
   justify-content: center;
-  padding: 28px 20px;
-  background: var(--cream);
+  
 }
 
 .hero-download button {
-  min-width: 180px;
-  padding: 13px 22px 14px;
+  min-width: 80px;
+  padding: 8px 10px 10px;
   border: 0;
   border-radius: 8px;
   color: var(--white);
   background: var(--blue);
   font: inherit;
-  font-weight: 800;
+  font-weight: 600;
   cursor: pointer;
 }
 
